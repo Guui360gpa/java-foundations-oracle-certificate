@@ -33,9 +33,9 @@ public class Experiment {
         for (int i = 0; i < measurements.length; i++) {
             if (measurements[i] == null){break;}
             result += "\n\t" + (i+1) +
-                    " " + measurements[i].note+
-                    "\t" + measurements[i].value+
-                    " " + measurements[i].unit;
+                    " " + measurements[i].getNote()+
+                    "\t" + measurements[i].getValue()+
+                    " " + measurements[i].getUnit();
         }
         return result;
     }
