@@ -20,6 +20,21 @@ public class Measurement {
         return unit;
     }
 
+
+    public Measurement(String note,double value, String unit){
+        this.note = (note == null) ? "No Note" : note;
+        if (isSI(unit)){
+            this.value = value;
+            this.unit = unit;
+        }else {
+            if (isImperial(unit)){
+                this.unit = convertUnit(unit);
+                this.value = convertValue(unit,value);
+            }
+        }
+
+    }
+
     public boolean isSI (String unit){
         for (String u : SI_UNITS){
             if (u.equals(unit)){
@@ -54,20 +69,6 @@ public class Measurement {
             case "F" -> (value-32)*5/9+273.15;
             default -> value;
         };
-    }
-
-    public void setMeasurementDetails(String note,double value, String unit){
-        this.note = (note == null) ? "No Note" : note;
-        if (isSI(unit)){
-            this.value = value;
-            this.unit = unit;
-        }else {
-            if (isImperial(unit)){
-                this.unit = convertUnit(unit);
-                this.value = convertValue(unit,value);
-            }
-        }
-
     }
 
 
