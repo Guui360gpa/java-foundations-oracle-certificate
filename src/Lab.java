@@ -2,7 +2,7 @@ public class Lab {
     public static void main(String[] args) {
         Experiment e1 = new Experiment();
 
-        e1.summary = "Measured different things";
+        e1.setSummary("Measured different things");
         e1.addMeasurement("Initial weight",24.57,"kg");
         e1.addMeasurement("Imperial unit check",42,"lb");
         e1.addMeasurement("Quite Cold",-33.6,"F");
@@ -15,9 +15,8 @@ public class Lab {
         e1.addMeasurement("Close to 12 lumens",1,"cd");
         e1.addMeasurement("Final Weight",5,"kg");
 
-        Experiment e2 = new Experiment();
+        Experiment e2 = new Experiment("Measure Distance");
 
-        e2.summary = "Measure Distance";
         e2.addMeasurement("Quite close",12.5,"m");
         e2.addMeasurement("Imperial unit check",12.5/0.3048,"ft");
         e2.addMeasurement(null,5,"ft");
