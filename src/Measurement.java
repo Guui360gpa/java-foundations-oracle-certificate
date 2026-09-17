@@ -8,6 +8,18 @@ public class Measurement {
     private double value;
     private String unit;
 
+    public String getNote() {
+        return note;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
     public boolean isSI (String unit){
         for (String u : SI_UNITS){
             if (u.equals(unit)){
