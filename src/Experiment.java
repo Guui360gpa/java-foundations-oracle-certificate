@@ -10,6 +10,7 @@ public class Experiment {
     }
 
     public Experiment(String summary) {
+        id = ++counter;
         this.summary = summary;
     }
 
@@ -31,7 +32,7 @@ public class Experiment {
     }
 
     public String experimentReport(){
-        String result = "\n"+summary+"\nMeasurements:";
+        String result = "\nExperiment #"+id+"\n"+summary+"\nMeasurements:";
         for (int i = 0; i < measurements.length; i++) {
             if (measurements[i] == null){break;}
             result += "\n\t" + (i+1) +
