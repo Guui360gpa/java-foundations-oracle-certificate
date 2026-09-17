@@ -22,8 +22,7 @@ public class Experiment {
     public void addMeasurement(String note, double value, String unit){
         for (int i = 0; i < measurements.length; i++) {
             if (measurements[i] == null){
-                measurements[i] = new Measurement();
-                measurements[i].setMeasurementDetails(note,value,unit);
+                measurements[i] = new Measurement(note,value,unit);
                 break;
             }
         }
