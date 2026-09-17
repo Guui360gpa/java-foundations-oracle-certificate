@@ -1,9 +1,25 @@
 public class Experiment {
 
-    String summary;
-    Measurement[] measurements = new Measurement[10];
+    private String summary;
+    private Measurement[] measurements = new Measurement[10];
 
-    public void addMeasurement(String note,double value,String unit){
+    public Experiment() {
+        this("New Experiment");
+    }
+
+    public Experiment(String summary) {
+        this.summary = summary;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public void addMeasurement(String note, double value, String unit){
         for (int i = 0; i < measurements.length; i++) {
             if (measurements[i] == null){
                 measurements[i] = new Measurement();
