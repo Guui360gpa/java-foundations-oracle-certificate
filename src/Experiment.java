@@ -1,6 +1,8 @@
 public class Experiment {
 
     private String summary;
+    private static int counter;
+    private int id;
     private Measurement[] measurements = new Measurement[10];
 
     public Experiment() {

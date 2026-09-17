@@ -53,7 +53,7 @@ public class Measurement {
         return false;
     }
 
-    public String convertUnit(String unit){
+    public static String convertUnit(String unit){
         return switch (unit){
             case "ft" -> SI_UNITS[1];
             case "lb" -> SI_UNITS[2];
@@ -62,7 +62,7 @@ public class Measurement {
         };
     }
 
-    public double convertValue(String unit, double value){
+    public static double convertValue(String unit, double value){
         return switch (unit){
             case "ft" -> value*ft2m;
             case "lb" -> value*lb2kg;
