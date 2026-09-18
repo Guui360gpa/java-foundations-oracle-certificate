@@ -31,7 +31,8 @@ public class Experiment {
         }
     }
 
-    public String experimentReport(){
+    @Override
+    public String toString(){
         String result = "\nExperiment #"+id+"\n"+summary+"\nMeasurements:";
         for (int i = 0; i < measurements.length; i++) {
             if (measurements[i] == null){break;}

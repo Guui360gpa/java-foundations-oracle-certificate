@@ -71,5 +71,8 @@ public class Measurement {
         };
     }
 
-
+    @Override
+    public String toString() {
+        return note+"\t"+value+" "+unit;
+    }
 }
