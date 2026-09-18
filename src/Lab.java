@@ -22,8 +22,8 @@ public class Lab {
         e2.addMeasurement(null,5,"ft");
         e2.addMeasurement("Brong unit",12.5,"x");
 
-        System.out.println(e1.experimentReport());
-        System.out.println(e2.experimentReport());
+        System.out.println(e1);
+        System.out.println(e2);
 
 
     }

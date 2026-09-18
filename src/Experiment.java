@@ -36,10 +36,7 @@ public class Experiment {
         String result = "\nExperiment #"+id+"\n"+summary+"\nMeasurements:";
         for (int i = 0; i < measurements.length; i++) {
             if (measurements[i] == null){break;}
-            result += "\n\t" + (i+1) +
-                    " " + measurements[i].getNote()+
-                    "\t" + measurements[i].getValue()+
-                    " " + measurements[i].getUnit();
+            result += "\n\t" + (i+1) + " " + measurements[i];
         }
         return result;
     }
